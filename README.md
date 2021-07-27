@@ -1,4 +1,5 @@
-
+| Lesson Number      | Lesson Title |
+| ----------- | ----------- |
 |01 |Introduction to Pandas|
 |02 |The Basics of Pandas |
 |03 |How to Index by Row |
