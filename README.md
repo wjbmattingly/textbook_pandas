@@ -2,9 +2,9 @@
 | ----------- | ----------- |
 |01 |Introduction to Pandas|
 |02 |The Basics of Pandas |
-|03 |How to Index by Row |
-|04 |How to Find Data in DataFrame|
-|05 |How to Clean Data in DataFrame |
+|03 |How to Find Data in DataFrame |
+|04 |How to Organize Data |
+|05 |How to Clean Data |
 |06 | |
 |07 | |
 |08 | |
