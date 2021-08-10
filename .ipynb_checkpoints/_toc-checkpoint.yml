@@ -1,0 +1,19 @@
+format: jb-book
+root: intro
+parts:
+- caption: Key Concepts and Terms
+  numbered: true
+  chapters:
+  - file: 01_01_introduction_to_pandas
+    title: Introduction to Pandas
+  - file: 01_02_the_basics
+    title: The Basics of Pandas
+- caption: Working with Data in Pandas
+  numbered: true
+  chapters:
+  - file: 02_01_finding_data
+    title: Finding Data in a DataFrame
+  - file: 02_02_organizing_data
+    title: Organizing Data in Pandas
+  - file: 02_03_cleaning_data
+    title: Cleaning Data with Pandas
