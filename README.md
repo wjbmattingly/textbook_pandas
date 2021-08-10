@@ -3,11 +3,11 @@ This repository holds my forthcoming JupyterBook on Pandas. It is meant to funct
 
 | Lesson Number      | Lesson Title |
 | ----------- | ----------- |
-|01 |Introduction to Pandas|
-|02 |The Basics of Pandas |
-|03 |How to Find Data in DataFrame |
-|04 |How to Organize Data |
-|05 |How to Clean Data |
+|01.01 |Introduction to Pandas|
+|01.02 |The Basics of Pandas |
+|02.01 |How to Find Data in DataFrame |
+|02.02 |How to Organize Data |
+|02.03 |How to Clean Data |
 |06 | |
 |07 | |
 |08 | |
