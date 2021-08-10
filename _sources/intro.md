@@ -9,18 +9,18 @@
 ### <p align="center">How to Cite</p>
 Mattingly, William. <i>Introduction to Pandas in Python</i>, 2021. <a href="ner.pythonhumanities.com" target="_blank">pandas.pythonhumanities.com</a>.
 <p align="center">
-  
+
 <br><br><br><br>
 ### <p align="center">Introduction</p>
 
 
 <br><br><br><br>
 ### <p align="center">Acknowledgments</p>
-This NER Textbook was created during my postdoctoral fellowship at the Smithsonian Institution's Data Science Lab with collaboration at the United States Holocaust Memorial Museum. It would not have been possible without the help of Rebecca Dikow, Mike Trizna, and those in the Data Science Lab who listened to, aided, and advised me while creating these notebooks. I would also like to thank the content experts at the USHMM, specifically Michael Haley Goldman, Michael Levy, and Robert Ehrenreich.
+This NER Textbook was created during my postdoctoral fellowship at the Smithsonian Institution's Data Science Lab with collaboration at the United States Holocaust Memorial Museum. It would not have been possible without the help of Rebecca Dikow, Mike Trizna, and those in the Data Science Lab who listened to, aided, and advised me while creating these notebooks. I would also like to thank the content experts at the USHMM, specifically Michael Haley Goldman, Michael Levy, and Robert Ehrenreich
 <p align="center">
-  
 
-  
+
+
 ```{image} ./images/data_science_lab_logo.png
 :alt: dsl
 :target: https://datascience.si.edu/
