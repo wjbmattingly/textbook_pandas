@@ -16,7 +16,7 @@ Mattingly, William. <i>Introduction to Pandas in Python</i>, 2021. <a href="ner.
 
 <br><br><br><br>
 ### <p align="center">Acknowledgments</p>
-This NER Textbook was created during my postdoctoral fellowship at the Smithsonian Institution's Data Science Lab with collaboration at the United States Holocaust Memorial Museum. It would not have been possible without the help of Rebecca Dikow, Mike Trizna, and those in the Data Science Lab who listened to, aided, and advised me while creating these notebooks. I would also like to thank the content experts at the USHMM, specifically Michael Haley Goldman, Michael Levy, and Robert Ehrenreich.
+This Pandas Textbook was created during my postdoctoral fellowship at the Smithsonian Institution's Data Science Lab with collaboration at the United States Holocaust Memorial Museum. It would not have been possible without the help of Rebecca Dikow, Mike Trizna, and those in the Data Science Lab who listened to, aided, and advised me while creating these notebooks. I would also like to thank the content experts at the USHMM, specifically Michael Haley Goldman, Michael Levy, and Robert Ehrenreich.
 <p align="center">
 
 
