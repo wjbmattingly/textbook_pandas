@@ -246,6 +246,34 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#covered-in-this-chapter">
+   7.1. Covered in this Chapter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-the-data-from-pandas-to-networkx">
+   7.2. Getting the Data from Pandas to NetworkX
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphing-the-data">
+   7.3. Graphing the Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#customize-the-graph">
+   7.4. Customize the Graph
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -258,7 +286,17 @@
 <h1><span class="section-number">7. </span><center>Graphing Network Data with Pandas</center><a class="headerlink" href="#center-graphing-network-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
-<center>August 2021</center><p>Pandas on its own cannot plot out network data. Instead, we must rely on two other libraries, NetworkX and Matplotlib. NetworkX is the standard Python library for working with networks. I have a forthcoming textbook, like this one, that walks users through NetworkX. Matplotlib is one of the standard plotting libraries. The purpose of this brief notebook, is to provide the code necessary for making Pandas work with NetworkX and Matplotlib to take networks stored in a Pandas DataFrame and transform the relationships into graphs.</p>
+<center>August 2021</center><div class="section" id="covered-in-this-chapter">
+<h2><span class="section-number">7.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>How to Get Network Data from Pandas to NetworkX<br></p></li>
+<li><p>How to Graph the Data<br></p></li>
+<li><p>How to Customize the Graph<br></p></li>
+</ol>
+</div>
+<div class="section" id="getting-the-data-from-pandas-to-networkx">
+<h2><span class="section-number">7.2. </span>Getting the Data from Pandas to NetworkX<a class="headerlink" href="#getting-the-data-from-pandas-to-networkx" title="Permalink to this headline">¶</a></h2>
+<p>Pandas on its own cannot plot out network data. Instead, we must rely on two other libraries, NetworkX and Matplotlib. NetworkX is the standard Python library for working with networks. I have a forthcoming textbook, like this one, that walks users through NetworkX. Matplotlib is one of the standard plotting libraries. The purpose of this brief notebook, is to provide the code necessary for making Pandas work with NetworkX and Matplotlib to take networks stored in a Pandas DataFrame and transform the relationships into graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -359,6 +397,9 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="graphing-the-data">
+<h2><span class="section-number">7.3. </span>Graphing the Data<a class="headerlink" href="#graphing-the-data" title="Permalink to this headline">¶</a></h2>
 <p>And with just two more lines of code we can plot that data out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -368,9 +409,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_11_0.png" src="_images/03_02_graphing_networks_with_pandas_11_0.png" />
+<img alt="_images/03_02_graphing_networks_with_pandas_14_0.png" src="_images/03_02_graphing_networks_with_pandas_14_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="customize-the-graph">
+<h2><span class="section-number">7.4. </span>Customize the Graph<a class="headerlink" href="#customize-the-graph" title="Permalink to this headline">¶</a></h2>
 <p>We have a problem with the image above, however, it is difficult to understand who the nodes represent. Let’s give them some labels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -380,7 +424,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_13_0.png" src="_images/03_02_graphing_networks_with_pandas_13_0.png" />
+<img alt="_images/03_02_graphing_networks_with_pandas_17_0.png" src="_images/03_02_graphing_networks_with_pandas_17_0.png" />
 </div>
 </div>
 <p>Now that we have labels, we need to make them a bit easier to read. We can do this by changing the font color to “whitesmoke” and setting the background to gray. To achieve this we first need to create a fig object to which we will append a few attributes. Next, we draw the network graph and give it a font_color of our desire. Finally, we set the facecolor to gray and plot it.</p>
@@ -394,7 +438,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_15_0.png" src="_images/03_02_graphing_networks_with_pandas_15_0.png" />
+<img alt="_images/03_02_graphing_networks_with_pandas_19_0.png" src="_images/03_02_graphing_networks_with_pandas_19_0.png" />
 </div>
 </div>
 <p>What if I wanted each node in our network to have an individual color? We can do that too by setting up a color map.</p>
@@ -412,7 +456,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_17_0.png" src="_images/03_02_graphing_networks_with_pandas_17_0.png" />
+<img alt="_images/03_02_graphing_networks_with_pandas_21_0.png" src="_images/03_02_graphing_networks_with_pandas_21_0.png" />
+</div>
 </div>
 </div>
 </div>
