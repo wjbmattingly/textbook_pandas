@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Introduction to Pandas &#8212; Introduction to Pandas</title>
+    <title>7. Graphing Network Data with Pandas &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. The Basics of Pandas" href="01_02_the_basics.html" />
-    <link rel="prev" title="INTRODUCTION TO PANDAS IN PYTHON" href="intro.html" />
+    <link rel="prev" title="6. Plotting Data with Pandas" href="03_01_pandas_and_plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,9 +95,9 @@
   Key Concepts and Terms
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_01_introduction_to_pandas.html">
    1. Introduction to Pandas
   </a>
  </li>
@@ -135,14 +134,14 @@
   Visualizing Data with Pandas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="03_01_pandas_and_plots.html">
    6. Basic Plotting with Pandas
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_02_graphing_networks_with_pandas.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    7. Graphing Networks from Pandas
   </a>
  </li>
@@ -187,7 +186,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/01_01_introduction_to_pandas.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/03_02_graphing_networks_with_pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -207,10 +206,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F01_01_introduction_to_pandas.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F03_02_graphing_networks_with_pandas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/01_01_introduction_to_pandas.ipynb"><button
+        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/03_02_graphing_networks_with_pandas.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -230,7 +229,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/01_01_introduction_to_pandas.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/03_02_graphing_networks_with_pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -247,39 +246,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   1.1. Covered in this Chapter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-pandas">
-   1.2. What is Pandas?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-pandas">
-   1.3. Why use Pandas?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-install-pandas">
-   1.4. How to Install Pandas
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-import-pandas">
-   1.5. How to Import Pandas
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -288,63 +254,166 @@
         
               <div>
                 
-  <div class="section" id="center-introduction-to-pandas-center">
-<h1><span class="section-number">1. </span><center>Introduction to Pandas</center><a class="headerlink" href="#center-introduction-to-pandas-center" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="center-graphing-network-data-with-pandas-center">
+<h1><span class="section-number">7. </span><center>Graphing Network Data with Pandas</center><a class="headerlink" href="#center-graphing-network-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
-<center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">1.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>What is Pandas?<br></p></li>
-<li><p>Why use Pandas?<br></p></li>
-<li><p>What is a DataFrame?<br></p></li>
-<li><p>How to Install Pandas<br></p></li>
-<li><p>How to Import Pandas (as PD!!)<br></p></li>
-</ol>
-</div>
-<div class="section" id="what-is-pandas">
-<h2><span class="section-number">1.2. </span>What is Pandas?<a class="headerlink" href="#what-is-pandas" title="Permalink to this headline">¶</a></h2>
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" width="500"></center><p>Pandas is a Python library in Python that allows for you to easily work with tabular data that is often stored in Excel files or .csv files. It is often considered one of the most vital Python libraries for data analysis because of its ease of use. There are other Python libraries that allow you to work with Excel data, such as XLSX and XLRD, which are leveraged by Pandas on the back end to interact with Excel spreadsheets. However, most tabular data is stored in .csv files, or Comma Separated Values files. There are other variations of this same structure (such as .tsv), but they all work the same. They use a special character to denote movement in the table to the next cell.</p>
-</div>
-<div class="section" id="why-use-pandas">
-<h2><span class="section-number">1.3. </span>Why use Pandas?<a class="headerlink" href="#why-use-pandas" title="Permalink to this headline">¶</a></h2>
-<p>If you work with data at all or plan to in the future, becoming comfortable with Pandas early on will make your life a lot easier. There are other Python libraries that allow you to work with .csv files, such as CSV, but these are not the same as Pandas. Pandas has one large advantage over CSV. It not only allows you to input .csv files into Python, it allows you to easily load them as DataFrames.</p>
-<p><strong>DataFrames</strong> are special data structures that contain not only the raw data in a table, but preserve the structure and hierarchy of that table. By loading .csv files as a DataFrame, Pandas not only allows you easy access to your data, but a powerful way to analyze it within a script. In addition to that, Pandas also has robust built-in features that we will explore throughout this textbook.</p>
-<p>Finally, many MANY!! libraries for data analysis are built on top of Pandas. If you plan to understand how certain libraries work or how to get data to specific classes or functions correctly as a Pandas DataFrame, then you must be familiar with the Pandas library.</p>
-<p>So, why use Pandas? Because it is the best library for importing and working with tabular data. It allows you to easily read files as DataFrames. And, it is a required library for most data analysis libraries.</p>
-</div>
-<div class="section" id="how-to-install-pandas">
-<h2><span class="section-number">1.4. </span>How to Install Pandas<a class="headerlink" href="#how-to-install-pandas" title="Permalink to this headline">¶</a></h2>
-<p>Installing pandas is as easy as installing any other Python library. If you are working within a Jupyter notebook like this one, you can execute the following command within a cell:</p>
+<center>August 2021</center><p>Pandas on its own cannot plot out network data. Instead, we must rely on two other libraries, NetworkX and Matplotlib. NetworkX is the standard Python library for working with networks. I have a forthcoming textbook, like this one, that walks users through NetworkX. Matplotlib is one of the standard plotting libraries. The purpose of this brief notebook, is to provide the code necessary for making Pandas work with NetworkX and Matplotlib to take networks stored in a Pandas DataFrame and transform the relationships into graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pandas
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s now load our data and see what it looks like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/network.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\wma22\anaconda3\lib\site-packages (1.2.4)
-Requirement already satisfied: pytz&gt;=2017.3 in c:\users\wma22\anaconda3\lib\site-packages (from pandas) (2021.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in c:\users\wma22\anaconda3\lib\site-packages (from pandas) (2.8.1)
-Requirement already satisfied: numpy&gt;=1.16.5 in c:\users\wma22\anaconda3\lib\site-packages (from pandas) (1.20.1)
-Requirement already satisfied: six&gt;=1.5 in c:\users\wma22\anaconda3\lib\site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
-</pre></div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>source</th>
+      <th>target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Tom</td>
+      <td>Rose</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rose</td>
+      <td>Rosita</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jerry</td>
+      <td>Jeff</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jeff</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Carmen</td>
+      <td>Carmen</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Rosita</td>
+      <td>Rosita</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Larry</td>
+      <td>Carmen</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Larry</td>
+      <td>Jerry</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
-</div>
-</div>
-<p>In Jupyter notebooks the ! indicates that you want to perform a command in the terminal. We then specify what command we want to run. In this case, pip install. Finally, we specify the library we want to install, pandas. If you are not working within a Jupyter notebook, you can do the same thing by opening up your terminal, such as Command Prompt on Windows, and executing the same command.</p>
-</div>
-<div class="section" id="how-to-import-pandas">
-<h2><span class="section-number">1.5. </span>How to Import Pandas<a class="headerlink" href="#how-to-import-pandas" title="Permalink to this headline">¶</a></h2>
-<p>Once you have installed Pandas, it is time to import it. It is Pythonic, or good Python practice, to import pandas as pd. By importing a library as something, you give it that specific variable as a name. This has a few benefits. First, it makes Pandas easier to call in your script, because you can call the library with “pd” rather than “pandas”. Second, all… yes. ALL. Pandas tutorials and posts on Stackoverflow will use “pd”.</p>
+<p>This is a pretty standard format for networks. We have two columns of data, a source, and a target. Imagine drawing a line to demonstrate networks, the source is where you start drawing the line and the target is where that line ends. This is known as force in network theory and is important for understanding the relationship between nodes, or individual points, in a network graph.</p>
+<p>We can use NetworkX’s built in function from_pandas_edgelist() and get that data straight into an edgelist.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>After executing the above command, you will have successfully imported pandas into your Python script. In the next notebook, we will start working with Pandas</p>
+<p>And with just two more lines of code we can plot that data out.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/03_02_graphing_networks_with_pandas_11_0.png" src="_images/03_02_graphing_networks_with_pandas_11_0.png" />
+</div>
+</div>
+<p>We have a problem with the image above, however, it is difficult to understand who the nodes represent. Let’s give them some labels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/03_02_graphing_networks_with_pandas_13_0.png" src="_images/03_02_graphing_networks_with_pandas_13_0.png" />
+</div>
+</div>
+<p>Now that we have labels, we need to make them a bit easier to read. We can do this by changing the font color to “whitesmoke” and setting the background to gray. To achieve this we first need to create a fig object to which we will append a few attributes. Next, we draw the network graph and give it a font_color of our desire. Finally, we set the facecolor to gray and plot it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s2">&quot;whitesmoke&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/03_02_graphing_networks_with_pandas_15_0.png" src="_images/03_02_graphing_networks_with_pandas_15_0.png" />
+</div>
+</div>
+<p>What if I wanted each node in our network to have an individual color? We can do that too by setting up a color map.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">)):</span>
+    <span class="n">val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">set_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="s1">&#39;val&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">val</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s2">&quot;whitesmoke&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/03_02_graphing_networks_with_pandas_17_0.png" src="_images/03_02_graphing_networks_with_pandas_17_0.png" />
+</div>
 </div>
 </div>
 
@@ -373,8 +442,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\wma22\anaconda3\lib\site-
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><p align="center">INTRODUCTION TO PANDAS IN PYTHON</p></a>
-    <a class='right-next' id="next-link" href="01_02_the_basics.html" title="next page"><span class="section-number">2. </span><center>The Basics of Pandas</center></a>
+    <a class='left-prev' id="prev-link" href="03_01_pandas_and_plots.html" title="previous page"><span class="section-number">6. </span><center>Plotting Data with Pandas</center></a>
 
         </div>
         
