@@ -17,3 +17,8 @@ parts:
     title: Organizing Data in Pandas
   - file: 02_03_cleaning_data
     title: Cleaning Data with Pandas
+- caption: Visualizing Data with Pandas
+  numbered: true
+  chapters:
+  - file: 03_01_pandas_and_plots
+    title: Basic Plotting with Pandas
