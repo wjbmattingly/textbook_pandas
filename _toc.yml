@@ -22,3 +22,5 @@ parts:
   chapters:
   - file: 03_01_pandas_and_plots
     title: Basic Plotting with Pandas
+  - file: 03_02_graphing_networks_with_pandas
+    title: Graphing Networks from Pandas
