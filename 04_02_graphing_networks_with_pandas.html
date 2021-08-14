@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Graphing Network Data with Pandas &#8212; Introduction to Pandas</title>
+    <title>8. Graphing Network Data with Pandas &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="6. Plotting Data with Pandas" href="03_01_pandas_and_plots.html" />
+    <link rel="prev" title="7. Plotting Data with Pandas" href="04_01_pandas_and_plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -131,18 +131,30 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Advanced Features of Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_01_advanced_strings.html">
+   6. Advanced Searching on Strings in DataFrame
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Visualizing Data with Pandas
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="03_01_pandas_and_plots.html">
-   6. Basic Plotting with Pandas
+  <a class="reference internal" href="04_01_pandas_and_plots.html">
+   7. Basic Plotting with Pandas
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   7. Graphing Network Data from Pandas
+   8. Graphing Network Data from Pandas
   </a>
  </li>
 </ul>
@@ -186,7 +198,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/03_02_graphing_networks_with_pandas.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/04_02_graphing_networks_with_pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -206,10 +218,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F03_02_graphing_networks_with_pandas.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F04_02_graphing_networks_with_pandas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/03_02_graphing_networks_with_pandas.ipynb"><button
+        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/04_02_graphing_networks_with_pandas.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -229,7 +241,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/03_02_graphing_networks_with_pandas.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/04_02_graphing_networks_with_pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -253,22 +265,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   7.1. Covered in this Chapter
+   8.1. Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#getting-the-data-from-pandas-to-networkx">
-   7.2. Getting the Data from Pandas to NetworkX
+   8.2. Getting the Data from Pandas to NetworkX
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphing-the-data">
-   7.3. Graphing the Data
+   8.3. Graphing the Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#customize-the-graph">
-   7.4. Customize the Graph
+   8.4. Customize the Graph
   </a>
  </li>
 </ul>
@@ -283,11 +295,11 @@
               <div>
                 
   <div class="section" id="center-graphing-network-data-with-pandas-center">
-<h1><span class="section-number">7. </span><center>Graphing Network Data with Pandas</center><a class="headerlink" href="#center-graphing-network-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span><center>Graphing Network Data with Pandas</center><a class="headerlink" href="#center-graphing-network-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
 <center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">7.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>How to Get Network Data from Pandas to NetworkX<br></p></li>
 <li><p>How to Graph the Data<br></p></li>
@@ -295,7 +307,7 @@
 </ol>
 </div>
 <div class="section" id="getting-the-data-from-pandas-to-networkx">
-<h2><span class="section-number">7.2. </span>Getting the Data from Pandas to NetworkX<a class="headerlink" href="#getting-the-data-from-pandas-to-networkx" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Getting the Data from Pandas to NetworkX<a class="headerlink" href="#getting-the-data-from-pandas-to-networkx" title="Permalink to this headline">¶</a></h2>
 <p>Pandas on its own cannot plot out network data. Instead, we must rely on two other libraries, NetworkX and Matplotlib. NetworkX is the standard Python library for working with networks. I have a forthcoming textbook, like this one, that walks users through NetworkX. Matplotlib is one of the standard plotting libraries. The purpose of this brief notebook, is to provide the code necessary for making Pandas work with NetworkX and Matplotlib to take networks stored in a Pandas DataFrame and transform the relationships into graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -399,7 +411,7 @@
 </div>
 </div>
 <div class="section" id="graphing-the-data">
-<h2><span class="section-number">7.3. </span>Graphing the Data<a class="headerlink" href="#graphing-the-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Graphing the Data<a class="headerlink" href="#graphing-the-data" title="Permalink to this headline">¶</a></h2>
 <p>And with just two more lines of code we can plot that data out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -409,12 +421,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_14_0.png" src="_images/03_02_graphing_networks_with_pandas_14_0.png" />
+<img alt="_images/04_02_graphing_networks_with_pandas_14_0.png" src="_images/04_02_graphing_networks_with_pandas_14_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="customize-the-graph">
-<h2><span class="section-number">7.4. </span>Customize the Graph<a class="headerlink" href="#customize-the-graph" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4. </span>Customize the Graph<a class="headerlink" href="#customize-the-graph" title="Permalink to this headline">¶</a></h2>
 <p>We have a problem with the image above, however, it is difficult to understand who the nodes represent. Let’s give them some labels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -424,7 +436,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_17_0.png" src="_images/03_02_graphing_networks_with_pandas_17_0.png" />
+<img alt="_images/04_02_graphing_networks_with_pandas_17_0.png" src="_images/04_02_graphing_networks_with_pandas_17_0.png" />
 </div>
 </div>
 <p>Now that we have labels, we need to make them a bit easier to read. We can do this by changing the font color to “whitesmoke” and setting the background to gray. To achieve this we first need to create a fig object to which we will append a few attributes. Next, we draw the network graph and give it a font_color of our desire. Finally, we set the facecolor to gray and plot it.</p>
@@ -438,7 +450,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_19_0.png" src="_images/03_02_graphing_networks_with_pandas_19_0.png" />
+<img alt="_images/04_02_graphing_networks_with_pandas_19_0.png" src="_images/04_02_graphing_networks_with_pandas_19_0.png" />
 </div>
 </div>
 <p>What if I wanted each node in our network to have an individual color? We can do that too by setting up a color map.</p>
@@ -456,7 +468,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/03_02_graphing_networks_with_pandas_21_0.png" src="_images/03_02_graphing_networks_with_pandas_21_0.png" />
+<img alt="_images/04_02_graphing_networks_with_pandas_21_0.png" src="_images/04_02_graphing_networks_with_pandas_21_0.png" />
 </div>
 </div>
 </div>
@@ -487,7 +499,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="03_01_pandas_and_plots.html" title="previous page"><span class="section-number">6. </span><center>Plotting Data with Pandas</center></a>
+    <a class='left-prev' id="prev-link" href="04_01_pandas_and_plots.html" title="previous page"><span class="section-number">7. </span><center>Plotting Data with Pandas</center></a>
 
         </div>
         
