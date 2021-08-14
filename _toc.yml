@@ -17,10 +17,15 @@ parts:
     title: Organizing Data in Pandas
   - file: 02_03_cleaning_data
     title: Cleaning Data with Pandas
+- caption: Advanced Features of Pandas
+  numbered: true
+  chapters:
+  - file: 03_01_advanced_strings
+    title: Advanced Searching on Strings in DataFrame
 - caption: Visualizing Data with Pandas
   numbered: true
   chapters:
-  - file: 03_01_pandas_and_plots
+  - file: 04_01_pandas_and_plots
     title: Basic Plotting with Pandas
-  - file: 03_02_graphing_networks_with_pandas
+  - file: 04_02_graphing_networks_with_pandas
     title: Graphing Network Data from Pandas
