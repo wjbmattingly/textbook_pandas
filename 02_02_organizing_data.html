@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Pandas Textbook for Digital Humanities &#8212; Introduction to Pandas</title>
+    <title>4. Organizing the DataFrame &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Pandas Textbook for Digital Humanities" href="02_03_cleaning_data.html" />
+    <link rel="next" title="5. Cleaning the DataFrame" href="02_03_cleaning_data.html" />
     <link rel="prev" title="3. Pandas Textbook for Digital Humanities" href="02_01_finding_data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -127,6 +127,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="02_03_cleaning_data.html">
    5. Cleaning Data with Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualizing Data with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_01_pandas_and_plots.html">
+   6. Basic Plotting with Pandas
   </a>
  </li>
 </ul>
@@ -236,33 +248,28 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-four-organizing-the-dataframe">
-   4.1. Chapter Four: Organizing the DataFrame
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   4.2. Covered in this Chapter
+   4.1. Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-sort-data-by-single-column">
-   4.3. How to Sort Data By Single Column
+   4.2. How to Sort Data By Single Column
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-reverse-sort-data-by-single-column">
-   4.4. How to Reverse Sort Data by Single Column
+   4.3. How to Reverse Sort Data by Single Column
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-sort-data-by-multiple-columns">
-   4.5. How to Sort Data by Multiple Columns
+   4.4. How to Sort Data by Multiple Columns
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-sort-data-by-multiple-columns-with-different-values-organized-differently">
-   4.6. How to Sort Data by Multiple Columns with Different Values Organized Differently
+   4.5. How to Sort Data by Multiple Columns with Different Values Organized Differently
   </a>
  </li>
 </ul>
@@ -276,13 +283,12 @@
         
               <div>
                 
-  <div class="section" id="pandas-textbook-for-digital-humanities">
-<h1><span class="section-number">4. </span>Pandas Textbook for Digital Humanities<a class="headerlink" href="#pandas-textbook-for-digital-humanities" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="chapter-four-organizing-the-dataframe">
-<h2><span class="section-number">4.1. </span>Chapter Four: Organizing the DataFrame<a class="headerlink" href="#chapter-four-organizing-the-dataframe" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">4.2. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="center-organizing-the-dataframe-center">
+<h1><span class="section-number">4. </span><center>Organizing the DataFrame</center><a class="headerlink" href="#center-organizing-the-dataframe-center" title="Permalink to this headline">¶</a></h1>
+<center>Dr. W.J.B. Mattingly</center>
+<center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
+<center>August 2021</center><div class="section" id="covered-in-this-chapter">
+<h2><span class="section-number">4.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>How to Sort Data by Single Column<br></p></li>
 <li><p>How to Reverse Sort Data by Single Column<br></p></li>
@@ -291,7 +297,7 @@
 </ol>
 </div>
 <div class="section" id="how-to-sort-data-by-single-column">
-<h2><span class="section-number">4.3. </span>How to Sort Data By Single Column<a class="headerlink" href="#how-to-sort-data-by-single-column" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>How to Sort Data By Single Column<a class="headerlink" href="#how-to-sort-data-by-single-column" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -724,7 +730,7 @@
 </div>
 </div>
 <div class="section" id="how-to-reverse-sort-data-by-single-column">
-<h2><span class="section-number">4.4. </span>How to Reverse Sort Data by Single Column<a class="headerlink" href="#how-to-reverse-sort-data-by-single-column" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>How to Reverse Sort Data by Single Column<a class="headerlink" href="#how-to-reverse-sort-data-by-single-column" title="Permalink to this headline">¶</a></h2>
 <p>As we can see, our data is now appearing as expected. We can pass additional keyword arguments to sort the data in the opposite direction, or descending by setting ascending to False. See the example below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -938,7 +944,7 @@
 </div>
 </div>
 <div class="section" id="how-to-sort-data-by-multiple-columns">
-<h2><span class="section-number">4.5. </span>How to Sort Data by Multiple Columns<a class="headerlink" href="#how-to-sort-data-by-multiple-columns" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>How to Sort Data by Multiple Columns<a class="headerlink" href="#how-to-sort-data-by-multiple-columns" title="Permalink to this headline">¶</a></h2>
 <p>Again, we can see the power of Pandas over Excel by the simplicity of altering our command to include multiple columns. Let’s say that we want to sort all the data by Pclass, then we want that data organized again by sex, so that all male and female passengers appear in order. We can do this by passing the argument of what we want organized as a list. Note the order of the list as well. The columns that appear earlier in the list correspond to those that receive primacy in the ascending. In other words, we organize by passenger class firsit, then sex. In this case, the method head, is simply showing the top 100 rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1363,7 +1369,7 @@
 </div>
 </div>
 <div class="section" id="how-to-sort-data-by-multiple-columns-with-different-values-organized-differently">
-<h2><span class="section-number">4.6. </span>How to Sort Data by Multiple Columns with Different Values Organized Differently<a class="headerlink" href="#how-to-sort-data-by-multiple-columns-with-different-values-organized-differently" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>How to Sort Data by Multiple Columns with Different Values Organized Differently<a class="headerlink" href="#how-to-sort-data-by-multiple-columns-with-different-values-organized-differently" title="Permalink to this headline">¶</a></h2>
 <p>What if we want to organize the data differently. By this I mean, we want for all the data to be organized by passenger class first and for that data to be ascending (1, 2, 3), but we want the sex of the passengers to be organized descending (male, female, rather than female, male). To achieve this, we can pass a list to ascending with 0s and 1s. 0 is False and 1 is True.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1816,7 +1822,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="02_01_finding_data.html" title="previous page"><span class="section-number">3. </span>Pandas Textbook for Digital Humanities</a>
-    <a class='right-next' id="next-link" href="02_03_cleaning_data.html" title="next page"><span class="section-number">5. </span>Pandas Textbook for Digital Humanities</a>
+    <a class='right-next' id="next-link" href="02_03_cleaning_data.html" title="next page"><span class="section-number">5. </span>Cleaning the DataFrame</a>
 
         </div>
         

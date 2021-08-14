@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Pandas Textbook for Digital Humanities &#8212; Introduction to Pandas</title>
+    <title>1. Introduction to Pandas &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Pandas Textbook for Digital Humanities" href="01_02_the_basics.html" />
+    <link rel="next" title="2. The Basics of Pandas" href="01_02_the_basics.html" />
     <link rel="prev" title="INTRODUCTION TO PANDAS IN PYTHON" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -127,6 +127,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="02_03_cleaning_data.html">
    5. Cleaning Data with Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualizing Data with Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_01_pandas_and_plots.html">
+   6. Basic Plotting with Pandas
   </a>
  </li>
 </ul>
@@ -236,33 +248,28 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-one-what-is-pandas">
-   1.1. Chapter One: What is Pandas?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   1.2. Covered in this Chapter
+   1.1. Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-pandas">
-   1.3. What is Pandas?
+   1.2. What is Pandas?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-use-pandas">
-   1.4. Why use Pandas?
+   1.3. Why use Pandas?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-install-pandas">
-   1.5. How to Install Pandas
+   1.4. How to Install Pandas
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-import-pandas">
-   1.6. How to Import Pandas
+   1.5. How to Import Pandas
   </a>
  </li>
 </ul>
@@ -276,13 +283,12 @@
         
               <div>
                 
-  <div class="section" id="pandas-textbook-for-digital-humanities">
-<h1><span class="section-number">1. </span>Pandas Textbook for Digital Humanities<a class="headerlink" href="#pandas-textbook-for-digital-humanities" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="chapter-one-what-is-pandas">
-<h2><span class="section-number">1.1. </span>Chapter One: What is Pandas?<a class="headerlink" href="#chapter-one-what-is-pandas" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">1.2. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="center-introduction-to-pandas-center">
+<h1><span class="section-number">1. </span><center>Introduction to Pandas</center><a class="headerlink" href="#center-introduction-to-pandas-center" title="Permalink to this headline">¶</a></h1>
+<center>Dr. W.J.B. Mattingly</center>
+<center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
+<center>August 2021</center><div class="section" id="covered-in-this-chapter">
+<h2><span class="section-number">1.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>What is Pandas?<br></p></li>
 <li><p>Why use Pandas?<br></p></li>
@@ -292,18 +298,18 @@
 </ol>
 </div>
 <div class="section" id="what-is-pandas">
-<h2><span class="section-number">1.3. </span>What is Pandas?<a class="headerlink" href="#what-is-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>What is Pandas?<a class="headerlink" href="#what-is-pandas" title="Permalink to this headline">¶</a></h2>
 <center><img src="images/pandas_logo.png" width="500"></center><p>Pandas is a Python library in Python that allows for you to easily work with tabular data that is often stored in Excel files or .csv files. It is often considered one of the most vital Python libraries for data analysis because of its ease of use. There are other Python libraries that allow you to work with Excel data, such as XLSX and XLRD, which are leveraged by Pandas on the back end to interact with Excel spreadsheets. However, most a lot of tabular data is stored in .csv files, or Comma Separated Values files. There are other variations of this same structure (such as .tsv), but they all work the same. They use a special character to denote movement in the table to the next cell.</p>
 </div>
 <div class="section" id="why-use-pandas">
-<h2><span class="section-number">1.4. </span>Why use Pandas?<a class="headerlink" href="#why-use-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Why use Pandas?<a class="headerlink" href="#why-use-pandas" title="Permalink to this headline">¶</a></h2>
 <p>If you work with data at all or plan to in the future, becoming comfortable with Pandas early on will make your life a lot easier. There are other Python libraries that allow you to work with .csv files, such as CSV, but these are not the same as Pandas. Pandas has one large advantage over CSV. It not only allows you to input .csv files into Python, it allows you to easily load them as DataFrames.</p>
 <p><strong>DataFrames</strong> are special data structures that contain not only the raw data in a table, but preserve the structure and hierarchy of that table. By loading .csv files as a DataFrame, Pandas not only allows you easy access to your data, but a powerful way to analyze it within a script. In addition to that, Pandas also has robust built-in features that we will explore throughout this textbook.</p>
 <p>Finally, many MANY!! libraries for data analysis are built on top of Pandas. If you plan to understand how certain libraries work or how to get data to specific classes or functions correctly as a Pandas DataFrame, then you must be familiar with the Pandas library.</p>
 <p>So, why use Pandas? Because it is the best library for importing and working with tabular data. It allows you to easily read files as DataFrames. And, it is a required library for most data analysis libraries.</p>
 </div>
 <div class="section" id="how-to-install-pandas">
-<h2><span class="section-number">1.5. </span>How to Install Pandas<a class="headerlink" href="#how-to-install-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>How to Install Pandas<a class="headerlink" href="#how-to-install-pandas" title="Permalink to this headline">¶</a></h2>
 <p>Installing pandas is as easy as installing any other Python library. If you are working within a Jupyter notebook like this one, you can execute the following command within a cell:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -324,7 +330,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\wma22\anaconda3\lib\site-
 <p>In Jupyter notebooks the ! indicates that you want to perform a command in the terminal. We then specify what command we want to run. In this case, pip install. Finally, we specify the library we want to install, pandas. If you are not working within a Jupyter notebook, you can do the same thing by opening up your terminal, such as Command Prompt on Windows, and executing the same command.</p>
 </div>
 <div class="section" id="how-to-import-pandas">
-<h2><span class="section-number">1.6. </span>How to Import Pandas<a class="headerlink" href="#how-to-import-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>How to Import Pandas<a class="headerlink" href="#how-to-import-pandas" title="Permalink to this headline">¶</a></h2>
 <p>Once you have installed Pandas, it is time to import it. It is Pythonic, or good Python practice, to import pandas as pd. By importing a library as something, you give it that specific variable as a name. This has a few benefits. First, it makes Pandas easier to call in your script, because you can call the library with “pd” rather than “pandas”. Second, all… yes. ALL. Pandas tutorials and posts on Stackoverflow will use “pd”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -363,7 +369,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\wma22\anaconda3\lib\site-
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><p align="center">INTRODUCTION TO PANDAS IN PYTHON</p></a>
-    <a class='right-next' id="next-link" href="01_02_the_basics.html" title="next page"><span class="section-number">2. </span>Pandas Textbook for Digital Humanities</a>
+    <a class='right-next' id="next-link" href="01_02_the_basics.html" title="next page"><span class="section-number">2. </span><center>The Basics of Pandas</center></a>
 
         </div>
         
