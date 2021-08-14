@@ -1314,11 +1314,11 @@
 <p>653 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>In some instances, we may have uncleaned data and the use of “Rev.” may be lowercase in one instance. To ensure that we grab both upper and lowercase forms of this sequence, let’s ignore the case by using the flags keyword argument.</p>
+<p>In some instances, we may have uncleaned data and the use of “Rev.” may be lowercase in one instance. To ensure that we grab both upper and lowercase forms of this sequence, let’s ignore the case by using the case keyword and setting it to False.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Rev.|Mr.&quot;</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Rev.|Mr.&quot;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
