@@ -287,8 +287,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#finding-features-within-a-string">
-   7.2. Finding Features within a String
+  <a class="reference internal nav-link" href="#introduction">
+   7.2. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -299,11 +299,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-query-function">
    7.4. The Query Function
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-regex-with-pandas">
-   7.5. Using RegEx with Pandas
   </a>
  </li>
 </ul>
@@ -328,8 +323,10 @@
 <li><p>How and When to use the Query() Function<br></p></li>
 </ol>
 </div>
-<div class="section" id="finding-features-within-a-string">
-<h2><span class="section-number">7.2. </span>Finding Features within a String<a class="headerlink" href="#finding-features-within-a-string" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h2><span class="section-number">7.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>In this chapter, we will meet two advanced ways of filtering or searching (querying) our data. These are aptly named Filter() and Query() functions. These two functions allow us to do some fairly advanced things within a narrow scope. By narrow scope, I mean the questions that we want to pose. Whenever you are manipulating or probing data, it is always best to think about the task as simply asking a question. In essence, this is precisely what you are doing. You are asking the database a question. In order to ask the question correctly, as is the case with any language, you need to know the correct syntax and when that particular question is the right one to ask. In this chapter, we explore how to frame specific questions with Filter() and Query().</p>
+<p>Each function is used in particular circumstances. Filter() is useful for getting a large data down to a smaller size, based on the questions you want to ask. Query(), on the other hand, is useful for phrasing questions that use comparison operators (less than, equal to, greater than, etc.). Let’s explore each in turn, but first, let’s import our Titanic dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -2348,9 +2345,6 @@ You should only use Query() when your question (query) can be posed as greater t
 </div></div></div>
 </div>
 <p>This is why query is such a powerful function in Pandas. You can do a lot with a single string. There are other ways to achieve this same result, but if your question cna be entirely phrased as a series of comparison operators (equal to, less than, etc.), then Query is likely the best option.</p>
-</div>
-<div class="section" id="using-regex-with-pandas">
-<h2><span class="section-number">7.5. </span>Using RegEx with Pandas<a class="headerlink" href="#using-regex-with-pandas" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
