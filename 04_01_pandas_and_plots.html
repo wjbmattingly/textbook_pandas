@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Plotting Data with Pandas &#8212; Introduction to Pandas</title>
+    <title>9. Plotting Data with Pandas &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Graphing Network Data with Pandas" href="04_02_graphing_networks_with_pandas.html" />
-    <link rel="prev" title="7. Advanced Filter and Querying" href="03_02_advanced_querying.html" />
+    <link rel="next" title="10. Graphing Network Data with Pandas" href="04_02_graphing_networks_with_pandas.html" />
+    <link rel="prev" title="8. Advanced Grouping" href="03_03_advanced_grouping.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -146,6 +146,11 @@
    7. Advanced Filtering and Querying
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_03_advanced_grouping.html">
+   8. Advanced Grouping with Groupby
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -155,12 +160,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Basic Plotting with Pandas
+   9. Basic Plotting with Pandas
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_graphing_networks_with_pandas.html">
-   9. Graphing Network Data from Pandas
+   10. Graphing Network Data from Pandas
   </a>
  </li>
 </ul>
@@ -172,7 +177,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="05_01_time_series_data.html">
-   10. Introduction to Time Series Data
+   11. Introduction to Time Series Data
   </a>
  </li>
 </ul>
@@ -283,27 +288,27 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   8.1. Covered in this Chapter
+   9.1. Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#importing-the-dataframe">
-   8.2. Importing the DataFrame
+   9.2. Importing the DataFrame
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bar-and-barh-charts-with-pandas">
-   8.3. Bar and Barh Charts with Pandas
+   9.3. Bar and Barh Charts with Pandas
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pie-charts-with-pandas">
-   8.4. Pie Charts with Pandas
+   9.4. Pie Charts with Pandas
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scatter-plots-with-pandas">
-   8.5. Scatter Plots with Pandas
+   9.5. Scatter Plots with Pandas
   </a>
  </li>
 </ul>
@@ -318,11 +323,11 @@
               <div>
                 
   <div class="section" id="center-plotting-data-with-pandas-center">
-<h1><span class="section-number">8. </span><center>Plotting Data with Pandas</center><a class="headerlink" href="#center-plotting-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span><center>Plotting Data with Pandas</center><a class="headerlink" href="#center-plotting-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
 <center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">8.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Key Ways to Plot Data in Pandas<br></p></li>
 <li><p>How to Create a Bar or Barh Graph<br></p></li>
@@ -331,7 +336,7 @@
 </ol>
 </div>
 <div class="section" id="importing-the-dataframe">
-<h2><span class="section-number">8.2. </span>Importing the DataFrame<a class="headerlink" href="#importing-the-dataframe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Importing the DataFrame<a class="headerlink" href="#importing-the-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>This notebook begins Part 3 of this textbook. Here, we will build upon our skills from Parts 1 and 2, and begin exploring how to visualize data in Pandas. Pandas sits on top of Matplotlib, one of the standard libraries used by data scientists for plotting data. As we will see in the next notebooks, you can also leverage other, more robust graphing libraries through Pandas. For now, though, let’s start with the basics. In this notebook, we will explore how to create three types of graphs: bar (and barh), pie, and scatter. I will also introduce you to some of the more recent features of Pandas 1.3.0, that allow you to control the graph a bit more.</p>
 <p>Before we do any of that, however, let’s import pandas and our data.</p>
 <div class="cell docutils container">
@@ -560,7 +565,7 @@
 </div>
 </div>
 <div class="section" id="bar-and-barh-charts-with-pandas">
-<h2><span class="section-number">8.3. </span>Bar and Barh Charts with Pandas<a class="headerlink" href="#bar-and-barh-charts-with-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Bar and Barh Charts with Pandas<a class="headerlink" href="#bar-and-barh-charts-with-pandas" title="Permalink to this headline">¶</a></h2>
 <p>With our data imported successfully, let’s jump right in with bar charts. Bar charts a great way to visualize qualitative data quantitatively. To demonstrate what I mean by this, let’s consider if we wanted to know how many male passengers were on the Titanic relative to female passengers. I could grab all the value counts and look at the numbers by calling .value_counts(), as in the example below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,7 +652,7 @@ Name: Sex, dtype: int64
 </div>
 </div>
 <div class="section" id="pie-charts-with-pandas">
-<h2><span class="section-number">8.4. </span>Pie Charts with Pandas<a class="headerlink" href="#pie-charts-with-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>Pie Charts with Pandas<a class="headerlink" href="#pie-charts-with-pandas" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">()</span>
@@ -704,7 +709,7 @@ Name: Sex, dtype: int64
 </div>
 </div>
 <div class="section" id="scatter-plots-with-pandas">
-<h2><span class="section-number">8.5. </span>Scatter Plots with Pandas<a class="headerlink" href="#scatter-plots-with-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Scatter Plots with Pandas<a class="headerlink" href="#scatter-plots-with-pandas" title="Permalink to this headline">¶</a></h2>
 <p>Scatter plots allow us to plot qualitative data quantitatively in relation to two numerical attributes. Let’s imagine that we are interested in exploring all passengers, something qualitative. Now, we want to know how each passenger relates to other passengers on two numerical, or quantitative attributes, e.g. the age of the passenger and the fare that they paid. Both of these are quantitative. We can therefore represent each person as a point on the scatter plot and plot them in relation to their fare (vertical, or y axis) and age (horizontal, or x axis) on the graph.</p>
 <p>In Pandas we can do this by passing two keyword arguments, x and y and set them both equal to the DataFramee column we want, e.g. “Age” and “Fare”.</p>
 <div class="cell docutils container">
@@ -1285,8 +1290,8 @@ Name: Sex, dtype: int64
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="03_02_advanced_querying.html" title="previous page"><span class="section-number">7. </span><center>Advanced Filter and Querying</center></a>
-    <a class='right-next' id="next-link" href="04_02_graphing_networks_with_pandas.html" title="next page"><span class="section-number">9. </span><center>Graphing Network Data with Pandas</center></a>
+    <a class='left-prev' id="prev-link" href="03_03_advanced_grouping.html" title="previous page"><span class="section-number">8. </span><center>Advanced Grouping</center></a>
+    <a class='right-next' id="next-link" href="04_02_graphing_networks_with_pandas.html" title="next page"><span class="section-number">10. </span><center>Graphing Network Data with Pandas</center></a>
 
         </div>
         

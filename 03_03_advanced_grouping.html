@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Grouping &#8212; Introduction to Pandas</title>
+    <title>8. Advanced Grouping &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Plotting Data with Pandas" href="04_01_pandas_and_plots.html" />
+    <link rel="prev" title="7. Advanced Filter and Querying" href="03_02_advanced_querying.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -133,7 +135,7 @@
   Advanced Features of Pandas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="03_01_advanced_strings.html">
    6. Advanced Searching on Strings in DataFrame
@@ -142,6 +144,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="03_02_advanced_querying.html">
    7. Advanced Filtering and Querying
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Advanced Grouping with Groupby
   </a>
  </li>
 </ul>
@@ -153,12 +160,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="04_01_pandas_and_plots.html">
-   8. Basic Plotting with Pandas
+   9. Basic Plotting with Pandas
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_graphing_networks_with_pandas.html">
-   9. Graphing Network Data from Pandas
+   10. Graphing Network Data from Pandas
   </a>
  </li>
 </ul>
@@ -170,7 +177,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="05_01_time_series_data.html">
-   10. Introduction to Time Series Data
+   11. Introduction to Time Series Data
   </a>
  </li>
 </ul>
@@ -281,32 +288,32 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   Covered in this Chapter
+   8.1. Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   8.2. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#groupby">
-   Groupby()
+   8.3. Groupby()
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantitative-analysis-with-count-and-sum">
-   Quantitative Analysis with Count() and Sum()
+   8.4. Quantitative Analysis with Count() and Sum()
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#working-with-multiple-groups">
-   Working with Multiple Groups
+   8.5. Working with Multiple Groups
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#groupings-with-many-subsets">
-   Groupings with Many Subsets
+   8.6. Groupings with Many Subsets
   </a>
  </li>
 </ul>
@@ -321,11 +328,11 @@
               <div>
                 
   <div class="section" id="center-advanced-grouping-center">
-<h1><center>Advanced Grouping</center><a class="headerlink" href="#center-advanced-grouping-center" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span><center>Advanced Grouping</center><a class="headerlink" href="#center-advanced-grouping-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
 <center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>What is the Purpose of Groupby()<br></p></li>
 <li><p>What are Pandas Group Objects<br></p></li>
@@ -334,7 +341,7 @@
 </ol>
 </div>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>When working with large quantities of data, it can sometimes be a bit difficult to understand broad patterns within your data. Often, you will need to group your data into small subsections based on some parameter, such as age, name, or some other feature. You can do this in Pandas using groupby(), which will be the main subject of this chapter. <strong>Groupby()</strong> is a feature of Pandas that returns a special groupby object. This object can be called to perform different types of analyses on data, especially when leveraging the built-in quantitative features of Pandas, such as count() and sum(). In this chapter, we will explore these features and see how they can be used on a real-world dataset, the Titanic dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -550,7 +557,7 @@
 </div>
 </div>
 <div class="section" id="groupby">
-<h2>Groupby()<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Groupby()<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
 <p>The groupby() function allows us to easily group our data in the DataFrame. Once your data are grouped, there are a lot of quantitative questions you can begin to ask. Let’s start simple. Let’s group our DataFrame by Sex.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1047,7 +1054,7 @@
 </div>
 </div>
 <div class="section" id="quantitative-analysis-with-count-and-sum">
-<h2>Quantitative Analysis with Count() and Sum()<a class="headerlink" href="#quantitative-analysis-with-count-and-sum" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4. </span>Quantitative Analysis with Count() and Sum()<a class="headerlink" href="#quantitative-analysis-with-count-and-sum" title="Permalink to this headline">¶</a></h2>
 <p>This is typically not how you would use the grouby function. It is far more powerful and often used for quantitative analysis on subsets of your data. Let’s say that I want to examine my dataset by sex and I am interested in known the quantity of column based solely on the metric of sex. I could use groupby() and .count(). When chained together, our question then becomes, how many PassengerId, Survived, Pclass, Name, etc. do we see for each column based on sex. While this question is particularly useful for the qualitative rows (such as Name) or numerical strings (such as PassengerId) because they display the total number of passengers because each person has a unique PassengerId and Name.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1222,7 +1229,7 @@ Name: Fare, dtype: float64
 </div>
 </div>
 <div class="section" id="working-with-multiple-groups">
-<h2>Working with Multiple Groups<a class="headerlink" href="#working-with-multiple-groups" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.5. </span>Working with Multiple Groups<a class="headerlink" href="#working-with-multiple-groups" title="Permalink to this headline">¶</a></h2>
 <p>Now, we have just the data on a single column. We can see that the combined fare of male passengers was greater than the combined sum of female passengers. Let’s say though that we are interested in how these sums divide over Pclass. We can pass a list to groupby, rather than just a string. This list will be a list of a strings that correspond to columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1246,7 +1253,7 @@ Name: Fare, dtype: float64
 <p>The result of this new question is more nuanced. We are not looking at the sum of all fares, rather the sum of fares divided on a Pclass-by-Pclass basis. This means that we can now understand that these sums varied by class. For example, while the total fare for male passengers was greater, the total fare for first class female passengers was greater than their first class male counterparts. The male fare, however, is greater for both the 2nd Class and 3rd Class groups.</p>
 </div>
 <div class="section" id="groupings-with-many-subsets">
-<h2>Groupings with Many Subsets<a class="headerlink" href="#groupings-with-many-subsets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.6. </span>Groupings with Many Subsets<a class="headerlink" href="#groupings-with-many-subsets" title="Permalink to this headline">¶</a></h2>
 <p>What if we were interested in something that would have more than just 6 neat subsections, such as 3 classes per sex. What if we also wanted to add another aspect to the groups, such as age. If we try and do that, our results are cutoff. We can try and use pd.set_option()</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2782,6 +2789,8 @@ Name: Fare, dtype: float64
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="03_02_advanced_querying.html" title="previous page"><span class="section-number">7. </span><center>Advanced Filter and Querying</center></a>
+    <a class='right-next' id="next-link" href="04_01_pandas_and_plots.html" title="next page"><span class="section-number">9. </span><center>Plotting Data with Pandas</center></a>
 
         </div>
         
