@@ -22,6 +22,8 @@ parts:
   chapters:
   - file: 03_01_advanced_strings
     title: Advanced Searching on Strings in DataFrame
+  - file: 03_02_advanced_querying
+    title: Advanced Filtering and Querying
 - caption: Visualizing Data with Pandas
   numbered: true
   chapters:
