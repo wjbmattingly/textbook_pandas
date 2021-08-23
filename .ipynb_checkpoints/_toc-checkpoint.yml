@@ -24,6 +24,8 @@ parts:
     title: Advanced Searching on Strings in DataFrame
   - file: 03_02_advanced_querying
     title: Advanced Filtering and Querying
+  - file: 03_03_advanced_grouping
+    title: Advanced Grouping with Groupby
 - caption: Visualizing Data with Pandas
   numbered: true
   chapters:
