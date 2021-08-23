@@ -294,11 +294,6 @@
    Groupby()
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-regex-with-pandas">
-   Using RegEx with Pandas
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -541,6 +536,7 @@
 </div>
 <div class="section" id="groupby">
 <h2>Groupby()<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
+<p>The groupby() function allows us to easily group our data in the DataFrame. Once your data are grouped, there are a lot of quantitative questions you can begin to ask. Let’s start simple. Let’s group our DataFrame by Sex.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Sex&quot;</span><span class="p">)</span>
@@ -553,6 +549,7 @@
 </div>
 </div>
 </div>
+<p>This output may not be quite what you expect. This is an object to which we can now pose targeted questions. Let’s try and see a DataFrame that only has “male” in the Sex column. We can do that by using get_group(“male”)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Sex&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="s2">&quot;male&quot;</span><span class="p">)</span>
@@ -763,6 +760,7 @@
 <p>577 rows × 12 columns</p>
 </div></div></div>
 </div>
+<p>This argument does not have to be a string. Let’s say, we want to just get all the people who are aged 20. We can do the same thing by grouping the dataset by “Age” and then getting the group of 20 year olds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -1032,9 +1030,10 @@
 </table>
 </div></div></div>
 </div>
+<p>This is typically not how you would use the grouby function. It is far more powerful and often used for quantitative analysis on subsets of your data. Let’s say that I want to examine my dataset by sex and I am interested in known the quantity of column based solely on the metric of sex. I could use groupby() and .count(). When chained together, our question then becomes, how many PassengerId, Survived, Pclass, Name, etc. do we see for each column based on sex. While this question is particularly useful for the qualitative rows (such as Name) or numerical strings (such as PassengerId) because they display the total number of passengers because each person has a unique PassengerId and Name.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Sex&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1061,7 +1060,7 @@
       <th>Survived</th>
       <th>Pclass</th>
       <th>Name</th>
-      <th>Sex</th>
+      <th>Age</th>
       <th>SibSp</th>
       <th>Parch</th>
       <th>Ticket</th>
@@ -1070,7 +1069,7 @@
       <th>Embarked</th>
     </tr>
     <tr>
-      <th>Age</th>
+      <th>Sex</th>
       <th></th>
       <th></th>
       <th></th>
@@ -1086,191 +1085,193 @@
   </thead>
   <tbody>
     <tr>
-      <th>0.42</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
+      <th>female</th>
+      <td>314</td>
+      <td>314</td>
+      <td>314</td>
+      <td>314</td>
+      <td>261</td>
+      <td>314</td>
+      <td>314</td>
+      <td>314</td>
+      <td>314</td>
+      <td>97</td>
+      <td>312</td>
     </tr>
     <tr>
-      <th>0.67</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>0.75</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>0.83</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>0.92</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>70.00</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>70.50</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>71.00</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>74.00</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>80.00</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
+      <th>male</th>
+      <td>577</td>
+      <td>577</td>
+      <td>577</td>
+      <td>577</td>
+      <td>453</td>
+      <td>577</td>
+      <td>577</td>
+      <td>577</td>
+      <td>577</td>
+      <td>107</td>
+      <td>577</td>
     </tr>
   </tbody>
 </table>
-<p>88 rows × 11 columns</p>
 </div></div></div>
 </div>
+<p>For the quantitative rows, we can use sum() function. This will tell us the sum of all the columns that have floats or integers. Note that this is not a really good question to pose for the Age column. It is, however, very useful for the Fare column and the Survived Column. Remember, if a person survived, they have a 1; if they did not, they have a 0. We can use the sum to know how many male vs. female survivors there were.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Sex</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Sex&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age
-0.42     1
-0.67     1
-0.75     2
-0.83     2
-0.92     1
-        ..
-70.00    2
-70.50    1
-71.00    2
-74.00    1
-80.00    1
-Name: Sex, Length: 88, dtype: int64
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Fare</th>
+    </tr>
+    <tr>
+      <th>Sex</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>female</th>
+      <td>135343</td>
+      <td>233</td>
+      <td>678</td>
+      <td>7286.00</td>
+      <td>218</td>
+      <td>204</td>
+      <td>13966.6628</td>
+    </tr>
+    <tr>
+      <th>male</th>
+      <td>262043</td>
+      <td>109</td>
+      <td>1379</td>
+      <td>13919.17</td>
+      <td>248</td>
+      <td>136</td>
+      <td>14727.2865</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s say, though, that we are only interested in the Fare column. Before we add sum to our chain, we can specify that we want specifically the Fare column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Sex&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Fare</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex
+female    13966.6628
+male      14727.2865
+Name: Fare, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
+<p>Now, we have just the data on a single column. We can see that the combined fare of male passengers was greater than the combined sum of female passengers. Let’s say though that we are interested in how these sums divide over Pclass. We can pass a list to groupby, rather than just a string. This list will be a list of a strings that correspond to columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Pclass&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">Fare</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="section" id="using-regex-with-pandas">
-<h2>Using RegEx with Pandas<a class="headerlink" href="#using-regex-with-pandas" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex     Pclass
+female  1         9975.8250
+        2         1669.7292
+        3         2321.1086
+male    1         8201.5875
+        2         2132.1125
+        3         4393.5865
+Name: Fare, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result of this new question is more nuanced. We are not looking at the sum of all fares, rather the sum of fares divided on a Pclass-by-Pclass basis. This means that we can now understand that these sums varied by class. For example, while the total fare for male passengers was greater, the total fare for first class female passengers was greater than their first class male counterparts. The male fare, however, is greater for both the 2nd Class and 3rd Class groups.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">Fare</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex     Pclass  Age 
+female  1       2.0     151.5500
+                14.0    120.0000
+                15.0    211.3375
+                16.0    183.8792
+                17.0    165.9000
+                          ...   
+male    3       59.0      7.2500
+                61.0      6.2375
+                65.0      7.7500
+                70.5      7.7500
+                74.0      7.7750
+Name: Fare, Length: 283, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">Fare</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex     Pclass  Age 
+female  1       2.0     151.5500
+                14.0    120.0000
+                15.0    211.3375
+                16.0    183.8792
+                17.0    165.9000
+                          ...   
+male    3       59.0      7.2500
+                61.0      6.2375
+                65.0      7.7500
+                70.5      7.7500
+                74.0      7.7750
+Name: Fare, Length: 283, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
