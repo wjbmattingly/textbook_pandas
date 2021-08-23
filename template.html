@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Introduction to Pandas &#8212; Introduction to Pandas</title>
+    <title>Advanced Searching on Strings &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. The Basics of Pandas" href="01_02_the_basics.html" />
-    <link rel="prev" title="INTRODUCTION TO PANDAS IN PYTHON" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,9 +94,9 @@
   Key Concepts and Terms
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_01_introduction_to_pandas.html">
    1. Introduction to Pandas
   </a>
  </li>
@@ -216,7 +214,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/01_01_introduction_to_pandas.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/template.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -236,10 +234,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F01_01_introduction_to_pandas.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2Ftemplate.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/01_01_introduction_to_pandas.ipynb"><button
+        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/template.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -259,7 +257,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/01_01_introduction_to_pandas.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/template.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -283,27 +281,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   1.1. Covered in this Chapter
+   Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-pandas">
-   1.2. What is Pandas?
+  <a class="reference internal nav-link" href="#finding-features-within-a-string">
+   Finding Features within a String
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-pandas">
-   1.3. Why use Pandas?
+  <a class="reference internal nav-link" href="#finding-strings-that-don-t-contain-feature">
+   Finding Strings that Don’t Contain Feature
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-install-pandas">
-   1.4. How to Install Pandas
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-import-pandas">
-   1.5. How to Import Pandas
+  <a class="reference internal nav-link" href="#using-regex-with-pandas">
+   Using RegEx with Pandas
   </a>
  </li>
 </ul>
@@ -317,63 +310,240 @@
         
               <div>
                 
-  <div class="section" id="center-introduction-to-pandas-center">
-<h1><span class="section-number">1. </span><center>Introduction to Pandas</center><a class="headerlink" href="#center-introduction-to-pandas-center" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="center-advanced-searching-on-strings-center">
+<h1><center>Advanced Searching on Strings</center><a class="headerlink" href="#center-advanced-searching-on-strings-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
 <center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">1.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>What is Pandas?<br></p></li>
-<li><p>Why use Pandas?<br></p></li>
-<li><p>What is a DataFrame?<br></p></li>
-<li><p>How to Install Pandas<br></p></li>
-<li><p>How to Import Pandas (as PD!!)<br></p></li>
+<h2>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><br>
+</li>
+<li><br>
+</li>
+<li><br></li>
 </ol>
 </div>
-<div class="section" id="what-is-pandas">
-<h2><span class="section-number">1.2. </span>What is Pandas?<a class="headerlink" href="#what-is-pandas" title="Permalink to this headline">¶</a></h2>
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" width="500"></center><p>Pandas is a Python library in Python that allows for you to easily work with tabular data that is often stored in Excel files or .csv files. It is often considered one of the most vital Python libraries for data analysis because of its ease of use. There are other Python libraries that allow you to work with Excel data, such as XLSX and XLRD, which are leveraged by Pandas on the back end to interact with Excel spreadsheets. However, most tabular data is stored in .csv files, or Comma Separated Values files. There are other variations of this same structure (such as .tsv), but they all work the same. They use a special character to denote movement in the table to the next cell.</p>
-</div>
-<div class="section" id="why-use-pandas">
-<h2><span class="section-number">1.3. </span>Why use Pandas?<a class="headerlink" href="#why-use-pandas" title="Permalink to this headline">¶</a></h2>
-<p>If you work with data at all or plan to in the future, becoming comfortable with Pandas early on will make your life a lot easier. There are other Python libraries that allow you to work with .csv files, such as CSV, but these are not the same as Pandas. Pandas has one large advantage over CSV. It not only allows you to input .csv files into Python, it allows you to easily load them as DataFrames.</p>
-<p><strong>DataFrames</strong> are special data structures that contain not only the raw data in a table, but preserve the structure and hierarchy of that table. By loading .csv files as a DataFrame, Pandas not only allows you easy access to your data, but a powerful way to analyze it within a script. In addition to that, Pandas also has robust built-in features that we will explore throughout this textbook.</p>
-<p>Finally, many MANY!! libraries for data analysis are built on top of Pandas. If you plan to understand how certain libraries work or how to get data to specific classes or functions correctly as a Pandas DataFrame, then you must be familiar with the Pandas library.</p>
-<p>So, why use Pandas? Because it is the best library for importing and working with tabular data. It allows you to easily read files as DataFrames. And, it is a required library for most data analysis libraries.</p>
-</div>
-<div class="section" id="how-to-install-pandas">
-<h2><span class="section-number">1.4. </span>How to Install Pandas<a class="headerlink" href="#how-to-install-pandas" title="Permalink to this headline">¶</a></h2>
-<p>Installing pandas is as easy as installing any other Python library. If you are working within a Jupyter notebook like this one, you can execute the following command within a cell:</p>
+<div class="section" id="finding-features-within-a-string">
+<h2>Finding Features within a String<a class="headerlink" href="#finding-features-within-a-string" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pandas
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/titanic.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\wma22\anaconda3\lib\site-packages (1.2.4)
-Requirement already satisfied: pytz&gt;=2017.3 in c:\users\wma22\anaconda3\lib\site-packages (from pandas) (2021.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in c:\users\wma22\anaconda3\lib\site-packages (from pandas) (2.8.1)
-Requirement already satisfied: numpy&gt;=1.16.5 in c:\users\wma22\anaconda3\lib\site-packages (from pandas) (1.20.1)
-Requirement already satisfied: six&gt;=1.5 in c:\users\wma22\anaconda3\lib\site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
-</pre></div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>886</th>
+      <td>887</td>
+      <td>0</td>
+      <td>2</td>
+      <td>Montvila, Rev. Juozas</td>
+      <td>male</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>211536</td>
+      <td>13.0000</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>887</th>
+      <td>888</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Graham, Miss. Margaret Edith</td>
+      <td>female</td>
+      <td>19.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>112053</td>
+      <td>30.0000</td>
+      <td>B42</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>889</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>2</td>
+      <td>W./C. 6607</td>
+      <td>23.4500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>889</th>
+      <td>890</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Behr, Mr. Karl Howell</td>
+      <td>male</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>111369</td>
+      <td>30.0000</td>
+      <td>C148</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>891</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Dooley, Mr. Patrick</td>
+      <td>male</td>
+      <td>32.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>370376</td>
+      <td>7.7500</td>
+      <td>NaN</td>
+      <td>Q</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 12 columns</p>
+</div></div></div>
 </div>
 </div>
+<div class="section" id="finding-strings-that-don-t-contain-feature">
+<h2>Finding Strings that Don’t Contain Feature<a class="headerlink" href="#finding-strings-that-don-t-contain-feature" title="Permalink to this headline">¶</a></h2>
 </div>
-<p>In Jupyter notebooks the ! indicates that you want to perform a command in the terminal. We then specify what command we want to run. In this case, pip install. Finally, we specify the library we want to install, pandas. If you are not working within a Jupyter notebook, you can do the same thing by opening up your terminal, such as Command Prompt on Windows, and executing the same command.</p>
-</div>
-<div class="section" id="how-to-import-pandas">
-<h2><span class="section-number">1.5. </span>How to Import Pandas<a class="headerlink" href="#how-to-import-pandas" title="Permalink to this headline">¶</a></h2>
-<p>Once you have installed Pandas, it is time to import it. It is Pythonic, or good Python practice, to import pandas as pd. By importing a library as something, you give it that specific variable as a name. This has a few benefits. First, it makes Pandas easier to call in your script, because you can call the library with “pd” rather than “pandas”. Second, all… yes. ALL. Pandas tutorials and posts on Stackoverflow will use “pd”.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>After executing the above command, you will have successfully imported pandas into your Python script. In the next notebook, we will start working with Pandas</p>
+<div class="section" id="using-regex-with-pandas">
+<h2>Using RegEx with Pandas<a class="headerlink" href="#using-regex-with-pandas" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -402,8 +572,6 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\wma22\anaconda3\lib\site-
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><p align="center">INTRODUCTION TO PANDAS IN PYTHON</p></a>
-    <a class='right-next' id="next-link" href="01_02_the_basics.html" title="next page"><span class="section-number">2. </span><center>The Basics of Pandas</center></a>
 
         </div>
         

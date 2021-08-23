@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Graphing Network Data with Pandas &#8212; Introduction to Pandas</title>
+    <title>9. Graphing Network Data with Pandas &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Time Series Data" href="05_01_time_series_data.html" />
-    <link rel="prev" title="7. Plotting Data with Pandas" href="04_01_pandas_and_plots.html" />
+    <link rel="next" title="10. Time Series Data" href="05_01_time_series_data.html" />
+    <link rel="prev" title="8. Plotting Data with Pandas" href="04_01_pandas_and_plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -141,6 +141,11 @@
    6. Advanced Searching on Strings in DataFrame
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_02_advanced_querying.html">
+   7. Advanced Filtering and Querying
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -150,12 +155,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="04_01_pandas_and_plots.html">
-   7. Basic Plotting with Pandas
+   8. Basic Plotting with Pandas
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Graphing Network Data from Pandas
+   9. Graphing Network Data from Pandas
   </a>
  </li>
 </ul>
@@ -167,7 +172,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="05_01_time_series_data.html">
-   9. Introduction to Time Series Data
+   10. Introduction to Time Series Data
   </a>
  </li>
 </ul>
@@ -278,22 +283,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   8.1. Covered in this Chapter
+   9.1. Covered in this Chapter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#getting-the-data-from-pandas-to-networkx">
-   8.2. Getting the Data from Pandas to NetworkX
+   9.2. Getting the Data from Pandas to NetworkX
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphing-the-data">
-   8.3. Graphing the Data
+   9.3. Graphing the Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#customize-the-graph">
-   8.4. Customize the Graph
+   9.4. Customize the Graph
   </a>
  </li>
 </ul>
@@ -308,11 +313,11 @@
               <div>
                 
   <div class="section" id="center-graphing-network-data-with-pandas-center">
-<h1><span class="section-number">8. </span><center>Graphing Network Data with Pandas</center><a class="headerlink" href="#center-graphing-network-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span><center>Graphing Network Data with Pandas</center><a class="headerlink" href="#center-graphing-network-data-with-pandas-center" title="Permalink to this headline">¶</a></h1>
 <center>Dr. W.J.B. Mattingly</center>
 <center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
 <center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">8.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>How to Get Network Data from Pandas to NetworkX<br></p></li>
 <li><p>How to Graph the Data<br></p></li>
@@ -320,7 +325,7 @@
 </ol>
 </div>
 <div class="section" id="getting-the-data-from-pandas-to-networkx">
-<h2><span class="section-number">8.2. </span>Getting the Data from Pandas to NetworkX<a class="headerlink" href="#getting-the-data-from-pandas-to-networkx" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Getting the Data from Pandas to NetworkX<a class="headerlink" href="#getting-the-data-from-pandas-to-networkx" title="Permalink to this headline">¶</a></h2>
 <p>Pandas on its own cannot plot out network data. Instead, we must rely on two other libraries, NetworkX and Matplotlib. NetworkX is the standard Python library for working with networks. I have a forthcoming textbook, like this one, that walks users through NetworkX. Matplotlib is one of the standard plotting libraries. The purpose of this brief notebook, is to provide the code necessary for making Pandas work with NetworkX and Matplotlib to take networks stored in a Pandas DataFrame and transform the relationships into graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -424,7 +429,7 @@
 </div>
 </div>
 <div class="section" id="graphing-the-data">
-<h2><span class="section-number">8.3. </span>Graphing the Data<a class="headerlink" href="#graphing-the-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Graphing the Data<a class="headerlink" href="#graphing-the-data" title="Permalink to this headline">¶</a></h2>
 <p>And with just two more lines of code we can plot that data out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -439,7 +444,7 @@
 </div>
 </div>
 <div class="section" id="customize-the-graph">
-<h2><span class="section-number">8.4. </span>Customize the Graph<a class="headerlink" href="#customize-the-graph" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>Customize the Graph<a class="headerlink" href="#customize-the-graph" title="Permalink to this headline">¶</a></h2>
 <p>We have a problem with the image above, however, it is difficult to understand who the nodes represent. Let’s give them some labels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -512,8 +517,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="04_01_pandas_and_plots.html" title="previous page"><span class="section-number">7. </span><center>Plotting Data with Pandas</center></a>
-    <a class='right-next' id="next-link" href="05_01_time_series_data.html" title="next page"><span class="section-number">9. </span><center>Time Series Data</center></a>
+    <a class='left-prev' id="prev-link" href="04_01_pandas_and_plots.html" title="previous page"><span class="section-number">8. </span><center>Plotting Data with Pandas</center></a>
+    <a class='right-next' id="next-link" href="05_01_time_series_data.html" title="next page"><span class="section-number">10. </span><center>Time Series Data</center></a>
 
         </div>
         
