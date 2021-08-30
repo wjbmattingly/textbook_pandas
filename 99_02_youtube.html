@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Pandas Textbook for Digital Humanities &#8212; Introduction to Pandas</title>
+    <title>&lt;no title&gt; &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Organizing the DataFrame" href="02_02_organizing_data.html" />
-    <link rel="prev" title="2. The Basics of Pandas" href="01_02_the_basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -113,9 +111,9 @@
   Working with Data in Pandas
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_01_finding_data.html">
    3. Finding Data in a DataFrame
   </a>
  </li>
@@ -221,7 +219,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/02_01_finding_data.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/99_02_youtube.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -241,10 +239,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F02_01_finding_data.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F99_02_youtube.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/02_01_finding_data.ipynb"><button
+        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/99_02_youtube.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -264,7 +262,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/02_01_finding_data.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/99_02_youtube.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -285,57 +283,7 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-three-finding-data-in-dataframe">
-   3.1. Chapter Three: Finding Data in DataFrame
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   3.2. Covered in this Chapter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   3.3. Video
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#about-the-titanic-dataset">
-   3.4. About the Titanic Dataset
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-find-column-data">
-   3.5. How to Find Column Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-get-a-quick-sense-of-the-dataset-with-df-head">
-   3.6. How to Get a Quick Sense of the Dataset with df.head()
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-grab-a-specific-range-of-rows-with-df-iloc">
-   3.7. How to Grab a Specific Range of Rows with df.iloc[]
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-get-a-quick-quantitative-understanding-of-the-dataset-with-describe">
-   3.8. How to Get a Quick Quantitative Understanding of the Dataset with Describe()
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-find-specific-information-in-the-dataset-with-df-loc">
-   3.9. How to Find Specific Information in the Dataset with df.loc
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-query-with-or-on-a-dataframe">
-   3.10. How to Query with “OR” (|) on a DataFrame
-  </a>
- </li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
 
             </nav>
@@ -347,64 +295,230 @@
         
               <div>
                 
-  <div class="section" id="pandas-textbook-for-digital-humanities">
-<h1><span class="section-number">3. </span>Pandas Textbook for Digital Humanities<a class="headerlink" href="#pandas-textbook-for-digital-humanities" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="chapter-three-finding-data-in-dataframe">
-<h2><span class="section-number">3.1. </span>Chapter Three: Finding Data in DataFrame<a class="headerlink" href="#chapter-three-finding-data-in-dataframe" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">3.2. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>How to Find Column Names<br></p></li>
-<li><p>How to Get a Quick Sense of the Dataset<br></p></li>
-<li><p>How to Grab a Specific Range of Rows<br></p></li>
-<li><p>How to Get a Quick Quantitative Understanding of the Dataset<br></p></li>
-<li><p>How to Find Specific Information in the Dataset<br></p></li>
-<li><p>How to use Or in a DataFrame query<br></p></li>
-</ol>
-</div>
-<div class="section" id="video">
-<h2><span class="section-number">3.3. </span>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/IFVkOCnH_Qs&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IFVkOCnH_Qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
-</div>
-<div class="section" id="about-the-titanic-dataset">
-<h2><span class="section-number">3.4. </span>About the Titanic Dataset<a class="headerlink" href="#about-the-titanic-dataset" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
 </div>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1200px-RMS_Titanic_3.jpg"><p>In the next two notebooks, we will be using the same dataset, the infamous <em>Titanic Survivor</em> dataset that was put out by Kaggle a few years ago. It has since become a staple dataset in machine learning and data science communities because of the breadth of data that it offers on the Titanic passengers. The goal of most machine learning challenges is to use this dataset to train a model that can accurately predict if a passenger would have survived given certain gender, economic, and class conditions.</p>
-<p>In these notebooks, we will be using a cleaned version of the dataset available on the GitHub page below. We will be using it because of its breadth of its qualitative and quantitative data.</p>
-<p>In this notebook, we are strictly interested in finding key data in the DataFrame. By the end of the notebook, you should have a good understanding of why working with CSV data in Python via Pandas is far more powerful and easy than using Excel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#data obtained from =&gt; https://github.com/datasciencedojo/datasets , but originally from Kaggle</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/titanic.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/titanic.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
 </div>
-<div class="section" id="how-to-find-column-data">
-<h2><span class="section-number">3.5. </span>How to Find Column Data<a class="headerlink" href="#how-to-find-column-data" title="Permalink to this headline">¶</a></h2>
-<p>Let’s presume that we just obtained this dataset. Let’s also presume we know nothing about it. Our first job is to get a sense of the data. Maybe we want to know all the columns that the dataset contains. To find this information, we can use df.columns</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>886</th>
+      <td>887</td>
+      <td>0</td>
+      <td>2</td>
+      <td>Montvila, Rev. Juozas</td>
+      <td>male</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>211536</td>
+      <td>13.0000</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>887</th>
+      <td>888</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Graham, Miss. Margaret Edith</td>
+      <td>female</td>
+      <td>19.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>112053</td>
+      <td>30.0000</td>
+      <td>B42</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>889</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>2</td>
+      <td>W./C. 6607</td>
+      <td>23.4500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>889</th>
+      <td>890</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Behr, Mr. Karl Howell</td>
+      <td>male</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>111369</td>
+      <td>30.0000</td>
+      <td>C148</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>891</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Dooley, Mr. Patrick</td>
+      <td>male</td>
+      <td>32.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>370376</td>
+      <td>7.7500</td>
+      <td>NaN</td>
+      <td>Q</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 12 columns</p>
+</div></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
@@ -419,7 +533,6 @@
 </div>
 </div>
 </div>
-<p>With our knowledge from the last notebook, we now know how to convert this into a list!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -450,10 +563,6 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="how-to-get-a-quick-sense-of-the-dataset-with-df-head">
-<h2><span class="section-number">3.6. </span>How to Get a Quick Sense of the Dataset with df.head()<a class="headerlink" href="#how-to-get-a-quick-sense-of-the-dataset-with-df-head" title="Permalink to this headline">¶</a></h2>
-<p>Another way to get a quick sense of the data is to use df.head(). This allows us to return to top pieces of information from the dataset. By default, head returns the top 5 rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -573,7 +682,6 @@
 </table>
 </div></div></div>
 </div>
-<p>We can pass in an argument to return more than 5. Let’s try and display 20.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -918,10 +1026,6 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="how-to-grab-a-specific-range-of-rows-with-df-iloc">
-<h2><span class="section-number">3.7. </span>How to Grab a Specific Range of Rows with df.iloc[]<a class="headerlink" href="#how-to-grab-a-specific-range-of-rows-with-df-iloc" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes, however, you need to grab a specific range of rows. Let’s say I am interested in rows 5-20. To grab this data, we can use the df.iloc[] command that we met in the last notebook. This will allow us to pass a specific index range like a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
@@ -1191,10 +1295,6 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="how-to-get-a-quick-quantitative-understanding-of-the-dataset-with-describe">
-<h2><span class="section-number">3.8. </span>How to Get a Quick Quantitative Understanding of the Dataset with Describe()<a class="headerlink" href="#how-to-get-a-quick-quantitative-understanding-of-the-dataset-with-describe" title="Permalink to this headline">¶</a></h2>
-<p>When working with numerical, quantitative data, we can automatically grab all numerical rows and learn a lot about the data with df.describe(). This will return the count, mean, standard deviation, minimum, maximum, etc. of our quantitative data. Sometimes, this data is useful to compute in such a way, such as the column Survived. Here, we can see that roughly .38 or 38% of the passengers (in this dataset) survived. Other numerical data does not really lend itself well to this kind of analysis, e.g. PassengerId which a unique numerical number corresponding to each passenger.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1314,10 +1414,6 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="how-to-find-specific-information-in-the-dataset-with-df-loc">
-<h2><span class="section-number">3.9. </span>How to Find Specific Information in the Dataset with df.loc<a class="headerlink" href="#how-to-find-specific-information-in-the-dataset-with-df-loc" title="Permalink to this headline">¶</a></h2>
-<p>As researchers, however, we often need to find targeted information in our dataset. Let’s say I am researching female passengers on the Titanic. I can achieve this fairly easily in Excel and in Python with Pandas. To do this in Pandas, you can use df.loc[] to pass a specific argument. In the example below, we are stating that we are looking for the columns in the DataFrame of “Sex” that match the string “female”. Try to recreate this and find all males in the dataset on your own. Note at the bottom of the DataFrame 314x12. This is the dimensions of the DataFrame. We can see that we have 314 results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">]</span>
@@ -1528,7 +1624,6 @@
 <p>314 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>But that’s not all df.loc[] can do. We can add multiple arguments to our search query here, rather like SQL. In the example below, note the addition of the parentheses around df[“Sex”] == “female” this denotes one parameter of our search. We then use the &amp; to add a second parameter. In this case, we are interested in not only returning those that are female, but also those who are in Pclass, or Passenger Class 1, i.e. First Class. When we execute the command below, we see that we have found 94 results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)]</span>
@@ -1739,7 +1834,6 @@
 <p>94 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>Let’s say now we are interested in only finding those that did not survive of the 94. To do that, we would simply add a third argument to our query. We ask Pandas to only show those whose Survived value is 0, or False. In other words, we are seeking to find those who did not survive.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Survived&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)]</span>
@@ -1829,7 +1923,6 @@
 </table>
 </div></div></div>
 </div>
-<p>With this data, I not only have qualitative information about each passenger, I also have some significant quantitative information as well. I know that of the 314 people in the dataset with the sex of female, 94 were in first class and of those 94, all survived except 3. Let’s now pose a question and I think you may already know the answer. Did class in any way play a role in the chance off survival on the Titanic. We don’t need a fancy machine learning algorithm to help us answer this question. We can simply examine the results from our query. Let’s find the total number of passengers that are identified as female, but not in first class, and then find the number of those who did not survive.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)]</span>
@@ -2250,24 +2343,16 @@
 <p>78 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>As we can see, we have 220 total people identified as female with 78 not surviving. We can perform some quick calculations to understand better our results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">94</span>
-<span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.031914893617021274
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">78</span><span class="o">/</span><span class="mi">220</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">78</span><span class="o">/</span><span class="mi">220</span>
-<span class="n">y</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
 </pre></div>
 </div>
 </div>
@@ -2277,12 +2362,19 @@
 </div>
 </div>
 </div>
-<p>In this case, x is the death rate for a first class female, whereas y is the death rate for those not in first class and female. The result is clear. The chance for survival was significantly greater for those identified as female if they were in first class, roughly 32.5% difference. Were there other factors at play, possibly. But that is beyond the point here. I am simply trying to illustrate how to obtain data to begin framing the research question at hand.</p>
-<p>Although we can achieve this same analysis in Excel, doing this in Python allows us to leverage the power of an entire programming language with the data at hand. This is a simple example of the power of Pandas over Excel. As we move forward in the next notebooks, you will see more examples of this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">94</span>
+<span class="n">y</span>
+</pre></div>
 </div>
-<div class="section" id="how-to-query-with-or-on-a-dataframe">
-<h2><span class="section-number">3.10. </span>How to Query with “OR” (|) on a DataFrame<a class="headerlink" href="#how-to-query-with-or-on-a-dataframe" title="Permalink to this headline">¶</a></h2>
-<p>Above we saw how to use df.loc to structure logical arguments for finding two specific conditions with “&amp;”. This indicated that both conditions must be true to be returned as a result. In case you don’t remember it, it looked like this:</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.031914893617021274
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)]</span>
@@ -2493,7 +2585,6 @@
 <p>220 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>We can do the same conditional approach, but rather than using and, we can also tell Pandas “Or” with the “|”, that vertical character you probably never use located above the “Enter” button on a standard American keyboard. Let’s try and grab all first and second class passengers. We can specify if the Pclass is either 1 OR 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)]</span>
@@ -2704,8 +2795,6 @@
 <p>400 rows × 12 columns</p>
 </div></div></div>
 </div>
-</div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -2736,24 +2825,6 @@
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="01_02_the_basics.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">2. </span><center>The Basics of Pandas</center></p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="02_02_organizing_data.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">4. </span><center>Organizing the DataFrame</center></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         

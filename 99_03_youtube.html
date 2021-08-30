@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Organizing the DataFrame &#8212; Introduction to Pandas</title>
+    <title>&lt;no title&gt; &#8212; Introduction to Pandas</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Cleaning the DataFrame" href="02_03_cleaning_data.html" />
-    <link rel="prev" title="3. Pandas Textbook for Digital Humanities" href="02_01_finding_data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -113,14 +111,14 @@
   Working with Data in Pandas
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="02_01_finding_data.html">
    3. Finding Data in a DataFrame
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_02_organizing_data.html">
    4. Organizing Data in Pandas
   </a>
  </li>
@@ -221,7 +219,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/02_02_organizing_data.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/99_03_youtube.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -241,10 +239,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F02_02_organizing_data.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/wjbmattingly/textbook_pandas/issues/new?title=Issue%20on%20page%20%2F99_03_youtube.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/02_02_organizing_data.ipynb"><button
+        <a class="edit-button" href="https://github.com/wjbmattingly/textbook_pandas/edit/main/99_03_youtube.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -264,7 +262,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/02_02_organizing_data.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/wjbmattingly/textbook_pandas/main?urlpath=tree/99_03_youtube.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -285,37 +283,7 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#covered-in-this-chapter">
-   4.1. Covered in this Chapter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   4.2. Video
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-sort-data-by-single-column">
-   4.3. How to Sort Data By Single Column
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-reverse-sort-data-by-single-column">
-   4.4. How to Reverse Sort Data by Single Column
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-sort-data-by-multiple-columns">
-   4.5. How to Sort Data by Multiple Columns
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-sort-data-by-multiple-columns-with-different-values-organized-differently">
-   4.6. How to Sort Data by Multiple Columns with Different Values Organized Differently
-  </a>
- </li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
 
             </nav>
@@ -327,48 +295,20 @@
         
               <div>
                 
-  <div class="section" id="center-organizing-the-dataframe-center">
-<h1><span class="section-number">4. </span><center>Organizing the DataFrame</center><a class="headerlink" href="#center-organizing-the-dataframe-center" title="Permalink to this headline">¶</a></h1>
-<center>Dr. W.J.B. Mattingly</center>
-<center>Smithsonian Data Science Lab and United States Holocaust Memorial Museum</center>
-<center>August 2021</center><div class="section" id="covered-in-this-chapter">
-<h2><span class="section-number">4.1. </span>Covered in this Chapter<a class="headerlink" href="#covered-in-this-chapter" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>How to Sort Data by Single Column<br></p></li>
-<li><p>How to Reverse Sort Data by Single Column<br></p></li>
-<li><p>How to Sort Data by Multiple Columns<br></p></li>
-<li><p>How to Sort Data by Multiple Columns with Different Values Organized Differently<br></p></li>
-</ol>
-</div>
-<div class="section" id="video">
-<h2><span class="section-number">4.2. </span>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/1G1ursLeZNg&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1G1ursLeZNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
-</div>
-<div class="section" id="how-to-sort-data-by-single-column">
-<h2><span class="section-number">4.3. </span>How to Sort Data By Single Column<a class="headerlink" href="#how-to-sort-data-by-single-column" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/titanic.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now that we’ve import pandas and created our DataFrame, let’s see what it looks like again.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/titanic.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
@@ -579,7 +519,6 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>In this scenario, I am interested in sorting the data (rather like Excel). Rather than using the sort feature in Excel, we can use the df.sort_values() method in Python. This will take one argument, specifically the column that you want to organize by. By default, this will be ascending. Let’s do this by class. In other words, sort the DataFrame so that those who were in first class appear first and those in third class appear last. We will do this by passing the argument “Pclass”, the column name corresponding to Passenger Class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Pclass&quot;</span><span class="p">)</span>
@@ -790,10 +729,6 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="how-to-reverse-sort-data-by-single-column">
-<h2><span class="section-number">4.4. </span>How to Reverse Sort Data by Single Column<a class="headerlink" href="#how-to-reverse-sort-data-by-single-column" title="Permalink to this headline">¶</a></h2>
-<p>As we can see, our data is now appearing as expected. We can pass additional keyword arguments to sort the data in the opposite direction, or descending by setting ascending to False. See the example below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1004,10 +939,6 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="how-to-sort-data-by-multiple-columns">
-<h2><span class="section-number">4.5. </span>How to Sort Data by Multiple Columns<a class="headerlink" href="#how-to-sort-data-by-multiple-columns" title="Permalink to this headline">¶</a></h2>
-<p>Again, we can see the power of Pandas over Excel by the simplicity of altering our command to include multiple columns. Let’s say that we want to sort all the data by Pclass, then we want that data organized again by sex, so that all male and female passengers appear in order. We can do this by passing the argument of what we want organized as a list. Note the order of the list as well. The columns that appear earlier in the list correspond to those that receive primacy in the ascending. In other words, we organize by passenger class firsit, then sex. In this case, the method head, is simply showing the top 100 rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -1218,7 +1149,6 @@
 <p>100 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>As with before, we can control how the data is sorted, either ascending or descending. If we set ascending to False, we organize all items in the list by this method. We can do this with the sample code below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1429,10 +1359,6 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="how-to-sort-data-by-multiple-columns-with-different-values-organized-differently">
-<h2><span class="section-number">4.6. </span>How to Sort Data by Multiple Columns with Different Values Organized Differently<a class="headerlink" href="#how-to-sort-data-by-multiple-columns-with-different-values-organized-differently" title="Permalink to this headline">¶</a></h2>
-<p>What if we want to organize the data differently. By this I mean, we want for all the data to be organized by passenger class first and for that data to be ascending (1, 2, 3), but we want the sex of the passengers to be organized descending (male, female, rather than female, male). To achieve this, we can pass a list to ascending with 0s and 1s. 0 is False and 1 is True.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
@@ -1643,7 +1569,6 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>What is particularly nice about Pandas over Excel is that this operation scales nicely. If we want to add more methods of sorting, we can do that too by simple increasing the indices of our lists. Always make sure that the length of your lists match, however. In other words, do not have 3 attributes to sort by and 2 items in your ascending list. In this case, we want to organize by passenger class, sex, and age with passenger class ascending, sex descending, and age ascending. Let’s see what that would look like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Pclass&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
@@ -1854,8 +1779,215 @@
 <p>891 rows × 12 columns</p>
 </div></div></div>
 </div>
-<p>As we move forward throughout this textbook, we will explore more robust ways to sort and organize our data. For now, you should feel comfortable with how to use sort_values() to do fairly robust tasks quickly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Pclass&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>803</th>
+      <td>804</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Thomas, Master. Assad Alexander</td>
+      <td>male</td>
+      <td>0.42</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2625</td>
+      <td>8.5167</td>
+      <td>NaN</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>755</th>
+      <td>756</td>
+      <td>1</td>
+      <td>2</td>
+      <td>Hamalainen, Master. Viljo</td>
+      <td>male</td>
+      <td>0.67</td>
+      <td>1</td>
+      <td>1</td>
+      <td>250649</td>
+      <td>14.5000</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>469</th>
+      <td>470</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Baclini, Miss. Helene Barbara</td>
+      <td>female</td>
+      <td>0.75</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2666</td>
+      <td>19.2583</td>
+      <td>NaN</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>644</th>
+      <td>645</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Baclini, Miss. Eugenie</td>
+      <td>female</td>
+      <td>0.75</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2666</td>
+      <td>19.2583</td>
+      <td>NaN</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>79</td>
+      <td>1</td>
+      <td>2</td>
+      <td>Caldwell, Master. Alden Gates</td>
+      <td>male</td>
+      <td>0.83</td>
+      <td>0</td>
+      <td>2</td>
+      <td>248738</td>
+      <td>29.0000</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>697</th>
+      <td>698</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Mullens, Miss. Katherine "Katie"</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>35852</td>
+      <td>7.7333</td>
+      <td>NaN</td>
+      <td>Q</td>
+    </tr>
+    <tr>
+      <th>727</th>
+      <td>728</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Mannion, Miss. Margareth</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>36866</td>
+      <td>7.7375</td>
+      <td>NaN</td>
+      <td>Q</td>
+    </tr>
+    <tr>
+      <th>792</th>
+      <td>793</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Sage, Miss. Stella Anna</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>8</td>
+      <td>2</td>
+      <td>CA. 2343</td>
+      <td>69.5500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>863</th>
+      <td>864</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Sage, Miss. Dorothy Edith "Dolly"</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>8</td>
+      <td>2</td>
+      <td>CA. 2343</td>
+      <td>69.5500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>889</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>2</td>
+      <td>W./C. 6607</td>
+      <td>23.4500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 12 columns</p>
+</div></div></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1887,24 +2019,6 @@
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="02_01_finding_data.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">3. </span>Pandas Textbook for Digital Humanities</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="02_03_cleaning_data.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">5. </span>Cleaning the DataFrame</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
